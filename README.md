@@ -1,5 +1,10 @@
 # Angular 2 Authentication for Front End Masters
 
+## User Profile Challenges
+
+* Use the payload from the JWT to generate a user profile
+* Display the user's gravatar, username, and email, along with the full JWT payload in the **Profile** view
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
 ## Development server
