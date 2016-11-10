@@ -17,9 +17,8 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.profile = jwtDecode(this.auth.getToken());
-    this.payload = jwtDecode(this.auth.getToken());
-    this.profile.gravatar = `${this.profile.gravatar}?s=200`;
+    // decode the JWT payload to get access
+    // to the user's profile
   }
 
 }
