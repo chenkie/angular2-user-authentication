@@ -28,9 +28,8 @@ export class AuthService {
     localStorage.removeItem('token');
   }
 
-  isAuthenticated(): boolean {
-    return tokenNotExpired('token');
-  }
+  // create an isAuthenticated method
+  // to check the user's token expiry
 
   getToken(): string {
     return localStorage.getItem('token');

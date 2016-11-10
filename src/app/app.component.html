@@ -6,8 +6,12 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-right">
-        <li *ngIf="!auth.isAuthenticated()"><a routerLink="/login">Log In</a></li>
-        <li *ngIf="auth.isAuthenticated()"><a routerLink="/home" (click)="auth.logout()">Log Out</a></li>      
+        
+        <!-- only show the Log In link if the user isn't authenticated -->
+        <li><a routerLink="/login">Log In</a></li>
+
+        <!-- only show the Log Out link if the user is authenticated -->
+        <li><a routerLink="/home" (click)="auth.logout()">Log Out</a></li>      
       </ul>      
     </div>
   </div>
