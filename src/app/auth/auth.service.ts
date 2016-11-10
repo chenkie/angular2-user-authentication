@@ -12,20 +12,22 @@ export class AuthService {
   constructor(private http: Http, private router: Router) { }
 
   login(credentials): Observable<Response> {
-    return this.http.post(`${API_URL}/users/authenticate`, credentials);
+    // return a POST request to /users/authenticate endpoint with
+    // credentials passed in
   }
 
   signup(credentials): Observable<Response> {
-    return this.http.post(`${API_URL}/users`, credentials);
+    // return a POST request to the /users enedpoint with
+    // the credentials passed in
   }
 
   finishAuthentication(token): void {
-    localStorage.setItem('token', token)
-    this.router.navigate(['home']);
+    // save the returned token in local storage
+    // and redirect the user to the home route
   }
 
   logout(): void {
-    localStorage.removeItem('token');
+    // remove the token from local storage
   }
 
 }
