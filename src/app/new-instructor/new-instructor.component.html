@@ -1,0 +1,21 @@
+<div class="col-sm-6 col-sm-offset-3">
+  <form #newInstructorForm="ngForm" (ngSubmit)="addInstructor(newInstructorForm.value)">
+    <div class="form-group">
+      <label for="first_name" class="">First Name</label>
+      <input type="text" class="form-control" placeholder="First Name" name="first_name" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="last_name" class="">Last Name</label>
+      <input type="text" class="form-control" placeholder="Last Name" name="last_name" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="email" class="">Email</label>
+      <input type="text" class="form-control" placeholder="Email Address" name="email" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="company" class="">Company</label>
+      <input type="text" class="form-control" placeholder="Company" name="company" ngModel required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

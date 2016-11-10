@@ -1,0 +1,16 @@
+<h1>Profile</h1>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="col-sm-3">
+      <img [src]="profile.gravatar" alt="Gravatar">
+    </div>
+    <div class="col-sm-9">
+      <h2>{{ profile.username }}</h2>
+      <hr>
+      <p><i class="glyphicon glyphicon-envelope"></i> {{ profile.email }}</p>
+      <h4>Payload</h4>
+      <pre>{{ payload | json }}</pre>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<h1>Front End Masters Instructors</h1>
+
+<button class="btn btn-primary" *ngIf="auth.isAuthenticated() && auth.isAdmin()" routerLink="/instructor/new">
+  <i class="glyphicon glyphicon-plus"></i> Add Instructor
+</button>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let instructor of instructors">
+    <div class="container">
+      <div class="col-sm-1">
+        <img [src]="getGravatar(instructor.email)" alt="Gravatar">
+      </div>
+      <div class="col-sm-11">
+        <h3>{{ instructor.first_name + ' ' + instructor.last_name }}</h3>
+        <p><i class="glyphicon glyphicon-envelope"></i> {{ instructor.email }}</p>
+        <p><i class="glyphicon glyphicon-briefcase"></i> {{ instructor.company }}</p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<p *ngIf="errorMessage">{{ errorMessage }}</p>

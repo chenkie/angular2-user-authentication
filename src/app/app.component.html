@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="/home">Angular 2 Authentication</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li *ngIf="auth.isAuthenticated()"><a routerLink="/instructor">Instructors</a></li>
+        <li *ngIf="auth.isAuthenticated()"><a routerLink="/profile">Profile</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li *ngIf="!auth.isAuthenticated()"><a routerLink="/login">Log In</a></li>
+        <li *ngIf="auth.isAuthenticated()"><a routerLink="/home" (click)="auth.logout()">Log Out</a></li>      
+      </ul>      
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+  <router-outlet></router-outlet>
+</main>
