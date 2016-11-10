@@ -19,12 +19,9 @@ export class NewInstructorComponent implements OnInit {
   ngOnInit() {}
 
   addInstructor(data) {
-    this.instructorService.addInstructor(data)
-      .map(response => response.json())
-      .subscribe(
-        data => this.router.navigate(['instructor']),
-        error => console.log(error)
-      );
+    // call the InstructorService to add a new
+    // instructor and redirect to the /instructor
+    // route if successful
   }
 
   goBack() {

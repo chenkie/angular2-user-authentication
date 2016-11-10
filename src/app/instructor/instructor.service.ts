@@ -11,11 +11,13 @@ export class InstructorService {
   constructor(private http: Http, private authHttp: AuthHttp) { }
 
   public getInstructors(): Observable<Response> {
-    return this.authHttp.get(`${API_URL}/instructors`);
+    // make a GET request to the /instructors endpoint to get
+    // a listing of instructors
   }
 
   public addInstructor(data): Observable<Response> {
-    return this.authHttp.post(`${API_URL}/instructors`, data);
+    // make a POST request to the /instructors endpoint to add
+    // a new instructor
   }
 
 }
