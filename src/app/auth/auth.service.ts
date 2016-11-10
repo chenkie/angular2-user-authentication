@@ -21,7 +21,7 @@ export class AuthService {
 
   finishAuthentication(token): void {
     localStorage.setItem('token', token)
-    this.router.navigate(['profile']);
+    this.router.navigate(['home']);
   }
 
   logout(): void {
@@ -34,10 +34,6 @@ export class AuthService {
 
   getToken(): string {
     return localStorage.getItem('token');
-  }
-
-  getUseRole(): string {
-    return jwtDecode(this.getToken()).scope;
   }
 
 }

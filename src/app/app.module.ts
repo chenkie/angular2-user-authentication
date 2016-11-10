@@ -11,15 +11,13 @@ import { provideAuth } from 'angular2-jwt';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
 import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent,
-    ProfileComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

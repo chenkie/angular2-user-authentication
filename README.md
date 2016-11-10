@@ -1,9 +1,9 @@
 # Angular 2 Authentication for Front End Masters
 
-## User Profile Challenges
+## Client Side Session Challenges
 
-* Use the payload from the JWT to generate a user profile
-* Display the user's gravatar, username, and email, along with the full JWT payload in the **Profile** view
+* Create an `isAuthenticated` method in the `AuthService` which checks whether the user's JWT has expired (Hint: use angular2-jwt for this)
+* Conditionally hide and show the **Log In** and **Log Out** links based on whether the user's JWT is expired
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
