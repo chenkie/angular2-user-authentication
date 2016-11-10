@@ -1,5 +1,12 @@
 # Angular 2 Authentication for Front End Masters
 
+## Protecting Routes Challenges
+
+* Add logic to the provided `authguard.service.ts` file that checks the authentication status of the user and returns `true` if the user is authenticated or `false` if the user is not authenticated
+* Add logic to the provided `roleguard.service.ts` file which checks the authentication status of the user and whether they have a `scope` of `admin`
+* Conditionally show and hide the **Add Instructor** button in the `/instructor` view based on whether the user is authenticated and is an admin
+* Add the `AuthGuard` and the `RoleGuard` to the `CanActivate` hook in the route definitions for `/instructor` and `/instructor/new` in the `app.routes.ts` file
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
 ## Development server

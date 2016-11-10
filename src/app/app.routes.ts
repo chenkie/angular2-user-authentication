@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { Routes, CanActivate } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { InstructorComponent } from './instructor/instructor.component';
@@ -11,7 +11,10 @@ export const ROUTES: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'instructor', component: InstructorComponent, canActivate: [AuthGuard] },
-  { path: 'instructor/new', component: NewInstructorComponent, canActivate: [RoleGuard] },
+  // guard the /instructor route with the canActivate hook
+  { path: 'instructor', component: InstructorComponent },
+  // guard the /instructor/new route with the canActivate hook
+  // check that the user is authenticated and is an admin
+  { path: 'instructor/new', component: NewInstructorComponent },
   { path: 'profile', component: ProfileComponent }
 ];
