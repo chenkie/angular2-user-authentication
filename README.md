@@ -1,5 +1,11 @@
 # Angular 2 Authentication for Front End Masters
 
+## Protecing Resources Challenges
+
+* In a service, make an authenticated `GET` request to the `/instructors` endpoint using `AuthHttp` and display the returned resources in the **Instructors** view
+* In a service, make an authenticated `POST` request to the `/instructors` endpoint using `AuthHttp` to create a new instructor
+* Use the above-created methods for fetching and creating instructors in the **Instructor** and **NewInstructor** components
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
 ## Development server
