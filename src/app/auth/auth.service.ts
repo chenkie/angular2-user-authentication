@@ -11,12 +11,12 @@ export class AuthService {
 
   constructor(private http: Http, private router: Router) { }
 
-  login(credentials): Observable<Response> {
+  login(credentials): void {
     // return a POST request to /users/authenticate endpoint with
     // credentials passed in
   }
 
-  signup(credentials): Observable<Response> {
+  signup(credentials): void {
     // return a POST request to the /users enedpoint with
     // the credentials passed in
   }
