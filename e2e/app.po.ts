@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class FemAuthAngular2Page {
+export class AngularUserAuthenticationPage {
   navigateTo() {
     return browser.get('/');
   }
