@@ -1,10 +1,10 @@
-import { FemAuthAngular2Page } from './app.po';
+import { AngularUserAuthenticationPage } from './app.po';
 
-describe('fem-auth-angular2 App', function() {
-  let page: FemAuthAngular2Page;
+describe('angular-user-authentication App', () => {
+  let page: AngularUserAuthenticationPage;
 
   beforeEach(() => {
-    page = new FemAuthAngular2Page();
+    page = new AngularUserAuthenticationPage();
   });
 
   it('should display message saying app works', () => {
